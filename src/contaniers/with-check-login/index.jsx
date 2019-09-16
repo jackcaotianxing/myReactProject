@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+// 检查是否登录的方法
 function withCheckLogin(WrappedComponent) {
 
   return connect(
