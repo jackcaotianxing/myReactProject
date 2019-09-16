@@ -12,12 +12,12 @@ function withCheckLogin(WrappedComponent) {
 
     render() {
       // 当前路径
-      const { token, location, history, match } = this.props;
-      const { pathname } = location;
+      const { token, ...rest} = this.props;//主要是传children属性
+      const { location:{pathname} } = rest;
 
       if (pathname === '/login' && token) return <Redirect to="/"/>;
       if (pathname !== '/login' && !token) return <Redirect to="/login"/>;
-      return <WrappedComponent location={location} history={history} match={match}/>;
+      return <WrappedComponent {...rest}/>;
     }
   })
 }

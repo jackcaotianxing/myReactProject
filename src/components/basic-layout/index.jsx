@@ -3,11 +3,12 @@ import React from 'react'
 import LeftNav from '../left-nav'
 import logo from '../../assets/imgs/logo.png'
 import './index.less'
+import withCheckLogin from "../../contaniers/with-check-login";
 const { Header, Content, Footer, Sider } = Layout;
 
 
 
-
+@withCheckLogin
 
 
 class BasicLayout extends React.Component{
