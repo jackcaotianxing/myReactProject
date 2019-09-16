@@ -1,20 +1,19 @@
 
-
-
 function getItem(key) {
-  const reult = window.localStorage.getItem(key)
-    return JSON.parse(reult)
+  const result = window.localStorage.getItem(key);
+  return JSON.parse(result);
 }
 
-function setItem(key,value) {
-  window.localStorage.setItem(key,JSON.stringify(value))
+function setItem(key, value) {
+  window.localStorage.setItem(key, JSON.stringify(value));
 }
 
 function removeItem(key) {
-  window.localStorage.removeItem(key)
+  window.localStorage.removeItem(key);
 }
+
 export {
-    getItem,
-    setItem,
-    removeItem
+  getItem,
+  setItem,
+  removeItem
 }

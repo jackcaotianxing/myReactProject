@@ -1,9 +1,10 @@
 import { Layout,  Breadcrumb,  } from 'antd';
 import React from 'react'
-import LeftNav from '../left-nav'
+import LeftNav from './left-nav'
 import logo from '../../assets/imgs/logo.png'
 import './index.less'
 import withCheckLogin from "../../contaniers/with-check-login";
+import HeaderMain from "./header-main";
 const { Header, Content, Footer, Sider } = Layout;
 
 
@@ -37,7 +38,9 @@ class BasicLayout extends React.Component{
                 </Sider>
                 {/*右边内容*/}
                 <Layout>
-                    <Header style={{ background: '#fff', padding: 0 }} />
+                    <Header style={{ background: '#fff', padding: 0,height: 80 }} >
+                        <HeaderMain/>
+                    </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <Breadcrumb style={{ margin: '16px 0' }}>
                             <Breadcrumb.Item>User</Breadcrumb.Item>
